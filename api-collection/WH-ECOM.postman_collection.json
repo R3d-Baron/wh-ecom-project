@@ -1,0 +1,1103 @@
+{
+	"info": {
+		"_postman_id": "f7607026-fa80-4799-b774-d7fe98e46c24",
+		"name": "WH-ECOM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37891744",
+		"_collection_link": "https://arnab8.postman.co/workspace/My-Workspace~882beb3b-3677-4857-8fab-ea7dde75dd86/collection/37891744-f7607026-fa80-4799-b774-d7fe98e46c24?action=share&source=collection_link&creator=37891744"
+	},
+	"item": [
+		{
+			"name": "attributes",
+			"item": [
+				{
+					"name": "attribute-add-update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"_id\": \"678b9f424a43516120f18dcb\",\r\n    \"name\": \"WeightEditTest\",\r\n    \"values\": [\"Light\", \"Medium\", \"Heavy\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}attribute-add-update"
+					},
+					"response": []
+				},
+				{
+					"name": "attribute-details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"678b9f0b4a43516120f18dc2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}attribute-details"
+					},
+					"response": []
+				},
+				{
+					"name": "attribute-list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "{{wh-ecom-url}}attribute-list"
+					},
+					"response": [
+						{
+							"name": "attribute-list Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": "{{wh-ecom-url}}attribute-list"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jan 2025 16:02:21 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1737216143"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "822"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"336-rcqUhK1fSu4nH/aVIUlprm2dbs8\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Successful.\",\n    \"data\": [\n        {\n            \"_id\": \"678b9f0b4a43516120f18dc2\",\n            \"name\": \"Color\",\n            \"values\": [\n                \"Red\",\n                \"Blue\",\n                \"Green\",\n                \"Yellow\"\n            ],\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-01-18T12:31:07.787Z\",\n            \"updatedAt\": \"2025-01-18T12:31:07.787Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"678b9f214a43516120f18dc5\",\n            \"name\": \"Size\",\n            \"values\": [\n                \"S\",\n                \"M\",\n                \"L\",\n                \"XL\"\n            ],\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-01-18T12:31:29.480Z\",\n            \"updatedAt\": \"2025-01-18T12:31:29.480Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"678b9f304a43516120f18dc8\",\n            \"name\": \"Material\",\n            \"values\": [\n                \"Cotton\",\n                \"Polyester\",\n                \"Leather\"\n            ],\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-01-18T12:31:44.337Z\",\n            \"updatedAt\": \"2025-01-18T12:31:44.337Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"678b9f424a43516120f18dcb\",\n            \"name\": \"WeightEditTest\",\n            \"values\": [\n                \"Light\",\n                \"Medium\",\n                \"Heavy\"\n            ],\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-01-18T12:32:02.938Z\",\n            \"updatedAt\": \"2025-01-18T12:33:25.694Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "category-add-update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"_id\": \"678baa8d7f35db34848ab314\",\r\n    \"name\": \"T-Shirt Edit\",\r\n    \"description\": \"Casual and stylish unisex t-shirt edit.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}category-add-update"
+					},
+					"response": []
+				},
+				{
+					"name": "category-details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"678baa8d7f35db34848ab314\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}category-details"
+					},
+					"response": []
+				},
+				{
+					"name": "category-list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // optional search parameters\r\n    \"name\": \"Shirt\",\r\n    \"description\": \"\",\r\n    \"isActive\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}category-list"
+					},
+					"response": [
+						{
+							"name": "category-list Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    // optional search parameters\r\n    \"name\": \"Shirt\",\r\n    \"description\": \"\",\r\n    \"isActive\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{wh-ecom-url}}category-list"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jan 2025 16:02:42 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1737216164"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "281"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"119-7z+2sfgVk/7PUjsweegnYOcNdiI\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Successful.\",\n    \"data\": [\n        {\n            \"_id\": \"678baa8d7f35db34848ab314\",\n            \"name\": \"T-Shirt Edit\",\n            \"description\": \"Casual and stylish unisex t-shirt edit.\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-01-18T13:20:13.897Z\",\n            \"updatedAt\": \"2025-01-18T13:32:27.229Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "product-add-update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"_id\": \"678bb59f0e8a49edc606130c\",\r\n    \"name\": \"Graphic T-Shirt edit\",\r\n    \"category\": \"678baa8d7f35db34848ab314\",\r\n    \"description\": \"A stylish graphic t-shirt with cool designs.\",\r\n    \"attributes\": [\"678b9f0b4a43516120f18dc2\", \"678b9f214a43516120f18dc5\", \"678b9f304a43516120f18dc8\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}product-add-update"
+					},
+					"response": []
+				},
+				{
+					"name": "product-details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"678bb59f0e8a49edc606130c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}product-details"
+					},
+					"response": []
+				},
+				{
+					"name": "product-list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // optional search parameters\r\n    \"text\": \"Shirt\",\r\n    \"categoryId\": \"678baa8d7f35db34848ab314\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}product-list"
+					},
+					"response": [
+						{
+							"name": "product-list-example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    // optional search parameters\r\n    \"text\": \"Shirt\",\r\n    \"categoryId\": \"678baa8d7f35db34848ab314\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{wh-ecom-url}}product-list"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jan 2025 16:03:00 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1737216182"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"47a-tTRYN4Pp6HnE/mJiPebl2tvk7kE\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Products fetched successfully\",\n    \"data\": [\n        {\n            \"_id\": \"678bb59f0e8a49edc606130c\",\n            \"name\": \"Graphic T-Shirt edit\",\n            \"category\": {\n                \"_id\": \"678baa8d7f35db34848ab314\",\n                \"name\": \"T-Shirt Edit\",\n                \"description\": \"Casual and stylish unisex t-shirt edit.\",\n                \"isActive\": true,\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-01-18T13:20:13.897Z\",\n                \"updatedAt\": \"2025-01-18T13:32:27.229Z\",\n                \"__v\": 0\n            },\n            \"description\": \"A stylish graphic t-shirt with cool designs.\",\n            \"attributes\": [\n                {\n                    \"_id\": \"678b9f0b4a43516120f18dc2\",\n                    \"name\": \"Color\",\n                    \"values\": [\n                        \"Red\",\n                        \"Blue\",\n                        \"Green\",\n                        \"Yellow\"\n                    ],\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2025-01-18T12:31:07.787Z\",\n                    \"updatedAt\": \"2025-01-18T12:31:07.787Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678b9f214a43516120f18dc5\",\n                    \"name\": \"Size\",\n                    \"values\": [\n                        \"S\",\n                        \"M\",\n                        \"L\",\n                        \"XL\"\n                    ],\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2025-01-18T12:31:29.480Z\",\n                    \"updatedAt\": \"2025-01-18T12:31:29.480Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678b9f304a43516120f18dc8\",\n                    \"name\": \"Material\",\n                    \"values\": [\n                        \"Cotton\",\n                        \"Polyester\",\n                        \"Leather\"\n                    ],\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2025-01-18T12:31:44.337Z\",\n                    \"updatedAt\": \"2025-01-18T12:31:44.337Z\",\n                    \"__v\": 0\n                }\n            ],\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-01-18T14:07:27.286Z\",\n            \"updatedAt\": \"2025-01-18T14:24:20.496Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product variation",
+			"item": [
+				{
+					"name": "product-variation-add-update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productId",
+									"value": "678bb59f0e8a49edc606130c",
+									"type": "text"
+								},
+								{
+									"key": "attributes",
+									"value": "[\"678b9f0b4a43516120f18dc2\", \"678b9f214a43516120f18dc5\"]",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1efd5b0e-c702-4e70-a061-2ff778db9d80"
+								},
+								{
+									"key": "_id",
+									"value": "678bcabf8947d74e378dd3c2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{wh-ecom-url}}product-variation-add-update"
+					},
+					"response": []
+				},
+				{
+					"name": "product-variation-details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"678bb59f0e8a49edc606130c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}product-variation-details"
+					},
+					"response": []
+				},
+				{
+					"name": "product-variation-list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // optional search parameters\r\n    \"categoryId\": \"678baa8d7f35db34848ab314\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}product-variation-list"
+					},
+					"response": [
+						{
+							"name": "product-variation-list Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    // optional search parameters\r\n    \"categoryId\": \"678baa8d7f35db34848ab314\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{wh-ecom-url}}product-variation-list"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jan 2025 16:03:16 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1737216198"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2219"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8ab-OwBLnRsXVTRcy1I+NApfvcHdwzY\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Product variations fetched successfully\",\n    \"data\": [\n        {\n            \"_id\": \"678bcabf8947d74e378dd3c2\",\n            \"productId\": {\n                \"_id\": \"678bb59f0e8a49edc606130c\",\n                \"name\": \"Graphic T-Shirt edit\",\n                \"category\": \"678baa8d7f35db34848ab314\",\n                \"description\": \"A stylish graphic t-shirt with cool designs.\",\n                \"attributes\": [\n                    \"678b9f0b4a43516120f18dc2\",\n                    \"678b9f214a43516120f18dc5\",\n                    \"678b9f304a43516120f18dc8\"\n                ],\n                \"isActive\": true,\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-01-18T14:07:27.286Z\",\n                \"updatedAt\": \"2025-01-18T14:24:20.496Z\",\n                \"__v\": 0\n            },\n            \"attributes\": [\n                {\n                    \"_id\": \"678b9f0b4a43516120f18dc2\",\n                    \"name\": \"Color\",\n                    \"values\": [\n                        \"Red\",\n                        \"Blue\",\n                        \"Green\",\n                        \"Yellow\"\n                    ],\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2025-01-18T12:31:07.787Z\",\n                    \"updatedAt\": \"2025-01-18T12:31:07.787Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678b9f214a43516120f18dc5\",\n                    \"name\": \"Size\",\n                    \"values\": [\n                        \"S\",\n                        \"M\",\n                        \"L\",\n                        \"XL\"\n                    ],\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2025-01-18T12:31:29.480Z\",\n                    \"updatedAt\": \"2025-01-18T12:31:29.480Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678b9f304a43516120f18dc8\",\n                    \"name\": \"Material\",\n                    \"values\": [\n                        \"Cotton\",\n                        \"Polyester\",\n                        \"Leather\"\n                    ],\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2025-01-18T12:31:44.337Z\",\n                    \"updatedAt\": \"2025-01-18T12:31:44.337Z\",\n                    \"__v\": 0\n                }\n            ],\n            \"image\": \"1737214800612tshirt.jpg\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-01-18T15:37:35.225Z\",\n            \"updatedAt\": \"2025-01-18T15:40:00.616Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"678bcd17a0e2eea7fa297307\",\n            \"productId\": {\n                \"_id\": \"678bb59f0e8a49edc606130c\",\n                \"name\": \"Graphic T-Shirt edit\",\n                \"category\": \"678baa8d7f35db34848ab314\",\n                \"description\": \"A stylish graphic t-shirt with cool designs.\",\n                \"attributes\": [\n                    \"678b9f0b4a43516120f18dc2\",\n                    \"678b9f214a43516120f18dc5\",\n                    \"678b9f304a43516120f18dc8\"\n                ],\n                \"isActive\": true,\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-01-18T14:07:27.286Z\",\n                \"updatedAt\": \"2025-01-18T14:24:20.496Z\",\n                \"__v\": 0\n            },\n            \"attributes\": [\n                {\n                    \"_id\": \"678b9f0b4a43516120f18dc2\",\n                    \"name\": \"Color\",\n                    \"values\": [\n                        \"Red\",\n                        \"Blue\",\n                        \"Green\",\n                        \"Yellow\"\n                    ],\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2025-01-18T12:31:07.787Z\",\n                    \"updatedAt\": \"2025-01-18T12:31:07.787Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678b9f214a43516120f18dc5\",\n                    \"name\": \"Size\",\n                    \"values\": [\n                        \"S\",\n                        \"M\",\n                        \"L\",\n                        \"XL\"\n                    ],\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2025-01-18T12:31:29.480Z\",\n                    \"updatedAt\": \"2025-01-18T12:31:29.480Z\",\n                    \"__v\": 0\n                }\n            ],\n            \"image\": \"1737215255247tshirt.jpg\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-01-18T15:47:35.264Z\",\n            \"updatedAt\": \"2025-01-18T15:47:35.264Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "stock",
+			"item": [
+				{
+					"name": "stock-add-update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"_id\": \"\",\r\n    \"variationId\" : \"678bcd17a0e2eea7fa297307\",\r\n    \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}stock-add-update"
+					},
+					"response": []
+				},
+				{
+					"name": "stock-details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"678bd4bb37d1ce22befc9e7e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}stock-details"
+					},
+					"response": []
+				},
+				{
+					"name": "stock-list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // optional search parameters\r\n    \"variationId\": \"678bcabf8947d74e378dd3c2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}stock-list"
+					},
+					"response": [
+						{
+							"name": "product-variation-list Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    // optional search parameters\r\n    \"categoryId\": \"678baa8d7f35db34848ab314\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{wh-ecom-url}}product-variation-list"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jan 2025 16:03:16 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1737216198"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2219"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8ab-OwBLnRsXVTRcy1I+NApfvcHdwzY\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Product variations fetched successfully\",\n    \"data\": [\n        {\n            \"_id\": \"678bcabf8947d74e378dd3c2\",\n            \"productId\": {\n                \"_id\": \"678bb59f0e8a49edc606130c\",\n                \"name\": \"Graphic T-Shirt edit\",\n                \"category\": \"678baa8d7f35db34848ab314\",\n                \"description\": \"A stylish graphic t-shirt with cool designs.\",\n                \"attributes\": [\n                    \"678b9f0b4a43516120f18dc2\",\n                    \"678b9f214a43516120f18dc5\",\n                    \"678b9f304a43516120f18dc8\"\n                ],\n                \"isActive\": true,\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-01-18T14:07:27.286Z\",\n                \"updatedAt\": \"2025-01-18T14:24:20.496Z\",\n                \"__v\": 0\n            },\n            \"attributes\": [\n                {\n                    \"_id\": \"678b9f0b4a43516120f18dc2\",\n                    \"name\": \"Color\",\n                    \"values\": [\n                        \"Red\",\n                        \"Blue\",\n                        \"Green\",\n                        \"Yellow\"\n                    ],\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2025-01-18T12:31:07.787Z\",\n                    \"updatedAt\": \"2025-01-18T12:31:07.787Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678b9f214a43516120f18dc5\",\n                    \"name\": \"Size\",\n                    \"values\": [\n                        \"S\",\n                        \"M\",\n                        \"L\",\n                        \"XL\"\n                    ],\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2025-01-18T12:31:29.480Z\",\n                    \"updatedAt\": \"2025-01-18T12:31:29.480Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678b9f304a43516120f18dc8\",\n                    \"name\": \"Material\",\n                    \"values\": [\n                        \"Cotton\",\n                        \"Polyester\",\n                        \"Leather\"\n                    ],\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2025-01-18T12:31:44.337Z\",\n                    \"updatedAt\": \"2025-01-18T12:31:44.337Z\",\n                    \"__v\": 0\n                }\n            ],\n            \"image\": \"1737214800612tshirt.jpg\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-01-18T15:37:35.225Z\",\n            \"updatedAt\": \"2025-01-18T15:40:00.616Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"678bcd17a0e2eea7fa297307\",\n            \"productId\": {\n                \"_id\": \"678bb59f0e8a49edc606130c\",\n                \"name\": \"Graphic T-Shirt edit\",\n                \"category\": \"678baa8d7f35db34848ab314\",\n                \"description\": \"A stylish graphic t-shirt with cool designs.\",\n                \"attributes\": [\n                    \"678b9f0b4a43516120f18dc2\",\n                    \"678b9f214a43516120f18dc5\",\n                    \"678b9f304a43516120f18dc8\"\n                ],\n                \"isActive\": true,\n                \"isDeleted\": false,\n                \"createdAt\": \"2025-01-18T14:07:27.286Z\",\n                \"updatedAt\": \"2025-01-18T14:24:20.496Z\",\n                \"__v\": 0\n            },\n            \"attributes\": [\n                {\n                    \"_id\": \"678b9f0b4a43516120f18dc2\",\n                    \"name\": \"Color\",\n                    \"values\": [\n                        \"Red\",\n                        \"Blue\",\n                        \"Green\",\n                        \"Yellow\"\n                    ],\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2025-01-18T12:31:07.787Z\",\n                    \"updatedAt\": \"2025-01-18T12:31:07.787Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678b9f214a43516120f18dc5\",\n                    \"name\": \"Size\",\n                    \"values\": [\n                        \"S\",\n                        \"M\",\n                        \"L\",\n                        \"XL\"\n                    ],\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2025-01-18T12:31:29.480Z\",\n                    \"updatedAt\": \"2025-01-18T12:31:29.480Z\",\n                    \"__v\": 0\n                }\n            ],\n            \"image\": \"1737215255247tshirt.jpg\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-01-18T15:47:35.264Z\",\n            \"updatedAt\": \"2025-01-18T15:47:35.264Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "pricing",
+			"item": [
+				{
+					"name": "pricing-add-update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"_id\": \"\",\r\n    \"variationId\" : \"678bcabf8947d74e378dd3c2\",\r\n    \"price\": 300,\r\n    \"discount\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}pricing-add-update"
+					},
+					"response": []
+				},
+				{
+					"name": "pricing-details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"678bd98ac6bf69baed5ba997\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}pricing-details"
+					},
+					"response": []
+				},
+				{
+					"name": "pricing-list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // optional search parameters\r\n    \"variationId\": \"678bcabf8947d74e378dd3c2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{wh-ecom-url}}pricing-list"
+					},
+					"response": [
+						{
+							"name": "price-list Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    // optional search parameters\r\n    \"variationId\": \"678bcabf8947d74e378dd3c2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{wh-ecom-url}}pricing-list"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Jan 2025 16:43:18 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1737218600"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "272"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"110-iE2cs3y5jouczH/1YUDQ5uJ4Kcc\""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Pricelist fetched successfully\",\n    \"data\": [\n        {\n            \"_id\": \"678bd9aac6bf69baed5ba99a\",\n            \"variationId\": \"678bcabf8947d74e378dd3c2\",\n            \"price\": 300,\n            \"discount\": 5,\n            \"isDeleted\": false,\n            \"createdAt\": \"2025-01-18T16:41:14.693Z\",\n            \"updatedAt\": \"2025-01-18T16:41:14.693Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "wh-ecom-url",
+			"value": "http://localhost:4100/",
+			"type": "string"
+		}
+	]
+}
